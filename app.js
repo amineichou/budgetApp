@@ -83,7 +83,7 @@ const addExpense = () => {
     let expensePrice = document.getElementById('expensePriceInput').value;
     let expenseId = getExpenseNewId();
     let expenseTable = [];
-    if (checkForLetters(expenseName) && expensePrice > 0) {
+    if (checkForLetters(expenseName) && expensePrice > 0 && expenseName.trim() != "") {
         JSON.parse(localStorage.getItem('expensesTable')).map((elem) => {
             expenseTable.push(elem);
         });
